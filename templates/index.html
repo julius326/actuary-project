@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance Premium Calculator</title>
+</head>
+<body>
+    <h2>Insurance Premium Calculator</h2>
+    <form method="POST" action="/calculate/">
+        {% csrf_token %}
+        Age: <input type="number" name="age"><br>
+        Smoker:
+        <select name="smoker">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select><br>
+        Coverage Amount (KSh): <input type="number" name="coverage"><br>
+        <button type="submit">Calculate Premium</button>
+    </form>
+</body>
+</html>
