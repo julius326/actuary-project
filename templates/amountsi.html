@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Amount</h2>
+<p><strong>Formula:</strong> A = P(1+(r/100)*t)</p>
+<form method="POST">
+   {% csrf_token %}
+    <label>principal</label><br><br>
+    <input type="number" name="principal"><br><br>
+    <label>rate</label><br><br>
+    <input type="number" name="rate"><br><br>
+    <label>time</label><br><br>
+    <input type="number" step="any" name="time"><br><br>
+    <button type="submit">Calculate</button>
+</form>
+{% if Amount %}
+    <h3>Amount: {{ Amount }}</h3>
+{% endif %}
+</body>
+</html>

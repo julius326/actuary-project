@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measures of dispersion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #eee;
+        }
+        input {
+            width: 90%;
+            padding: 5px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+<h2>Measures of Dispersion</h2>
+<p>Measures of dispersion show how spread out the data is around a central value.</p>
+
+<h3>1. Range</h3>
+<p>The <strong>range</strong> is the difference between the largest and smallest value in a dataset.</p>
+<p><strong>Formula:</strong></p>
+<pre>
+Range = Maximum value - Minimum value
+</pre>
+<p><strong>Example:</strong> Data: 3, 7, 8, 5, 12 → Range = 12 - 3 = 9</p>
+
+<h3>2. Mean Deviation (MD)</h3>
+<p>Mean deviation measures the average distance of each observation from the mean or median.</p>
+<p><strong>Formula about mean:</strong></p>
+<pre>
+MD = Σ |x_i - x̄| / n
+</pre>
+<ul>
+    <li>x_i = each value</li>
+    <li>x̄ = mean</li>
+    <li>n = total number of observations</li>
+</ul>
+<p><strong>Example:</strong> Data: 2, 4, 6</p>
+<p>Mean = (2+4+6)/3 = 4</p>
+<p>MD = (|2-4| + |4-4| + |6-4|)/3 = (2+0+2)/3 = 1.33</p>
+
+<h3>3. Variance</h3>
+<p>Variance measures the average of squared deviations from the mean.</p>
+<p><strong>Formula (population):</strong></p>
+<pre>
+σ² = Σ (x_i - μ)² / N
+</pre>
+<p><strong>Formula (sample):</strong></p>
+<pre>
+s² = Σ (x_i - x̄)² / (n-1)
+</pre>
+<ul>
+    <li>μ = population mean</li>
+    <li>x̄ = sample mean</li>
+    <li>N = population size</li>
+    <li>n = sample size</li>
+</ul>
+<p><strong>Example:</strong> Data: 2, 4, 6 → Mean = 4</p>
+<p>Variance (sample) = ((2-4)² + (4-4)² + (6-4)²)/(3-1) = (4+0+4)/2 = 4</p>
+
+<h3>4. Standard Deviation (SD)</h3>
+<p>The <strong>standard deviation</strong> is the square root of variance, showing dispersion in the same units as data.</p>
+<p><strong>Formula:</strong></p>
+<pre>
+SD = √Variance
+</pre>
+<p><strong>Example:</strong> Continuing the previous example → SD = √4 = 2</p>
+
+<h3>5. Quartile Deviation / Semi-Interquartile Range</h3>
+<p>Measures the spread of the middle 50% of the data.</p>
+<p><strong>Formula:</strong></p>
+<pre>
+QD = (Q3 - Q1) / 2
+</pre>
+<p><strong>Example:</strong> If Q1 = 15 and Q3 = 43 → QD = (43 - 15)/2 = 14</p>
+
+</body>
+</html>

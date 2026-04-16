@@ -132,8 +132,11 @@
 <nav>
   <ul>
     <li><a href="{% url 'hom' %}">Home</a></li>
-    <li><a href="{% url 'index' %}">insurance_premium_calculator</a></li>
-    <li><a href="{% url 'averages' %}">averages</a></li>
+    <li><a href="{% url 'pc' %}">insurance_premium_calculator</a></li>
+    <li><a href="{% url 'moct' %}">Measures of Central Tendancy</a></li>
+      <li><a href="{% url 'mod' %}">Measures of Dispersion</a> </li>
+      <li><a href = "{% url 'ITAS' %}">Introduction to Actuarial Science</a></li>
+      <li><a href="{% url 'SMA3101' %}">Basic Mathematics</a></li>
   </ul>
 </nav>
 
@@ -146,18 +149,43 @@
   <div class="card">
     <h3>insurance_premium_calculator</h3>
     <p>Estimate your premium here.</p>
-    <a href="{% url 'index' %}">Try →</a>
+    <a href="{% url 'pc' %}">Try →</a>
+  </div>
+  <div class="card">
+    <h3>Simple interest calculator</h3>
+    <p>Estimate your simple interest here.</p>
+    <a href="{% url 'interests' %}">Try →</a>
+  </div>
+  <div class="card">
+    <h3>Amount Simple interest calculator</h3>
+    <p>Estimate your amount in simple interest here.</p>
+    <a href="{% url 'amountsi' %}">Try →</a>
   </div>
   <div class="card">
     <h3>Averages</h3>
     <p>Calculate the averages of a given table i.e AM,GM and HM.</p>
-    <a href="{% url 'averages' %}">Try →</a>
+    <a href="{% url 'moct' %}">Try →</a>
+  </div>
+     <div class="card">
+    <h3>Introduction to actuarial science</h3>
+    <p>Get introduced to actuarial science</p>
+    <a href="{% url 'ITAS' %}">Try →</a>
+  </div>
+     <div class="card">
+    <h3>Basic Mathematics</h3>
+    <p>Know more about basic mathematics</p>
+    <a href="{% url 'SMA3101' %}">Try →</a>
+  </div>
+    <div class="card">
+    <h3>Measure of Dispersion</h3>
+    <p></p>
+    <a href="{% url 'mod' %}">Try →</a>
   </div>
 </section>
 
 <footer>
   <p>&copy; 2025 Actuary Hub | Follow us:
-    <a href="#">LinkedIn</a> |
+    <a href="#">Instagram</a> |
     <a href="#">Twitter</a> |
     <a href="#">Facebook</a>
   </p>

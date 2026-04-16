@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #1e3a8a, #2563eb);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card {
+        background: #ffffff;
+        padding: 40px;
+        width: 400px;
+        border-radius: 14px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        text-align: center;
+        color: #111827;
+    }
+
+    .subtitle {
+        text-align: center;
+        font-size: 14px;
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: all 0.2s ease;
+    }
+
+    input:focus {
+        border-color: #2563eb;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+    button:hover {
+        background: #1e40af;
+    }
+
+    .messages {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+
+    .messages.success {
+        background: #ecfdf5;
+        color: #065f46;
+    }
+
+    .messages.error {
+        background: #fef2f2;
+        color: #991b1b;
+    }
+
+    .footer-text {
+        text-align: center;
+        font-size: 13px;
+        margin-top: 20px;
+        color: #6b7280;
+    }
+
+    .footer-text a {
+        color: #2563eb;
+        text-decoration: none;
+        font-weight: 500;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Create Account</h2>
+    <p class="subtitle">Start using the actuarial calculator platform</p>
+
+    <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phonenumber" placeholder="Phone Number" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="password2" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="messages {{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div class="footer-text">
+        Already have an account? <a href="{% url 'login' %}">Login</a>
+    </div>
+</div>
+
+</body>
+</html>
+

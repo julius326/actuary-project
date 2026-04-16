@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measure of Central Tendacy </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background: #eee;
+        }
+        input {
+            width: 90%;
+            padding: 5px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+<h1>Measures of Central Tendency (Mean, Mode and Median)</h1>
+
+<h2>Mean</h2>
+<p>
+    There are several types of mean, but we are going to discuss only three, which are:
+</p>
+
+<pre>
+Arithmetic Mean
+Geometric Mean
+Harmonic Mean
+</pre>
+
+<hr>
+
+<h3>Arithmetic Mean (AM)</h3>
+<p>
+    This is the standard average.<br>
+    It is normally given as:<br><br>
+
+    AM = <sup>∑fx</sup>/<sub>∑f</sub><br><br>
+
+    It is heavily used in insurance, economics, and data science.<br>
+    AM helps identify:
+</p>
+
+<ul>
+    <li>Average claim amount</li>
+    <li>Average premium</li>
+    <li>Expected loss</li>
+</ul>
+
+<h4>Example</h4>
+<p>
+    Given data values: 2, 4, 6, 8<br>
+    AM = (2 + 4 + 6 + 8) / 4 = 20 / 4 = 5
+</p>
+
+<hr>
+
+<h3>Geometric Mean (GM)</h3>
+<p>
+    Used when data grows multiplicatively (for example, population growth or investment returns).<br><br>
+
+    Usually given as:<br><br>
+
+    GM = <sup>n</sup>√(x<sub>1</sub> · x<sub>2</sub> · x<sub>3</sub> · ... · x<sub>n</sub>)<br><br>
+
+    <b>Note:</b><br>
+    <i>
+        AM ≥ GM<br>
+        Best for compound interest and investment returns.
+    </i>
+</p>
+
+<h4>Example</h4>
+<p>
+    Suppose returns are 10% and 20%:<br>
+    GM = √(1.10 × 1.20) ≈ 1.1488 → 14.88% average growth rate.
+</p>
+
+<hr>
+
+<h3>Harmonic Mean (HM)</h3>
+<p>
+    HM is used when averaging rates such as speed, density, and price per unit.<br><br>
+
+    Usually given as:<br><br>
+
+    HM = N / (∑(f/x))<br><br>
+
+    <b>Note:</b><br>
+    <i>
+        HM ≤ GM ≤ AM<br>
+        Usually used in actuarial risk rates and travel speed problems.
+    </i>
+</p>
+
+<h4>Example</h4>
+<p>
+    A car travels 60 km/h and 40 km/h for equal distances.<br>
+    HM = 2 / (1/60 + 1/40) = 48 km/h.
+</p>
+
+<hr>
+
+    <h2>Mean Calculator (AM, GM, HM)</h2>
+ <form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <th>x (Values)</th>
+            <th>f (Frequencies)</th>
+        </tr>
+        {% for i in "1234"|make_list %}
+        <tr>
+            <td>
+                <input type="number" name="x" step="any"
+                       value="{{ x_values.counter0 }}">
+            </td>
+            <td>
+                <input type="number" name="f" step="any"
+                       value="{{ f_values.counter0 }}">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="submit" class="btn">Calculate</button>
+</form>
+
+
+
+
+    <!-- Results -->
+    {% if am %}
+    <h3>Results</h3>
+    <table>
+        <tr>
+            <th>Arithmetic Mean</th>
+            <th>Geometric Mean</th>
+            <th>Harmonic Mean</th>
+        </tr>
+        <tr>
+            <td>{{ am|floatformat:3 }}</td>
+            <td>{{ gm|floatformat:3 }}</td>
+            <td>{{ hm|floatformat:3 }}</td>
+        </tr>
+    </table>
+    {% endif %}
+
+
+<h2>Median</h2>
+<p>The <strong>median</strong> is the middle value of a dataset when arranged in ascending or descending order.</p>
+
+<h3>1. Ungrouped Data</h3>
+<ul>
+    <li>Arrange the data in ascending order.</li>
+    <li>Find the position of the median using:
+        <pre>
+Median position =
+    if n is odd: (n + 1) / 2
+    if n is even: n / 2 and (n / 2) + 1
+        </pre>
+        where <em>n</em> is the total number of observations.
+    </li>
+    <li>Locate the median using the position from the formula.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>Data: 3, 7, 8, 5, 12, 14, 21</p>
+<p>Step 1: Arrange: 3, 5, 7, 8, 12, 14, 21</p>
+<p>Step 2: n = 7 (odd) → Median position = (7+1)/2 = 4</p>
+<p>Step 3: Median = 4th value = <strong>8</strong></p>
+
+<h3>2. Grouped Data</h3>
+<p>For grouped data, the median is calculated as:</p>
+<pre>
+Median = L + ((n/2 - CF)/f) * h
+</pre>
+<ul>
+    <li>L = lower boundary of the median class</li>
+    <li>n = total frequency</li>
+    <li>CF = cumulative frequency before the median class</li>
+    <li>f = frequency of the median class</li>
+    <li>h = class width</li>
+</ul>
+<p><strong>Example:</strong></p>
+<table border="1">
+<tr><th>Class</th><th>Frequency</th></tr>
+<tr><td>0-10</td><td>5</td></tr>
+<tr><td>10-20</td><td>8</td></tr>
+<tr><td>20-30</td><td>12</td></tr>
+<tr><td>30-40</td><td>5</td></tr>
+</table>
+<p>Step 1: Total frequency n = 30 → n/2 = 15</p>
+<p>Step 2: Median class = 20-30 (cumulative frequency before = 13)</p>
+<p>Step 3: Median = 20 + ((15-13)/12) * 10 = 21.67</p>
+
+<hr>
+
+<h2>Mode</h2>
+<p>The <strong>mode</strong> is the most frequently occurring value.</p>
+
+<h3>1. Ungrouped Data</h3>
+<p>Example: Data: 4, 6, 4, 9, 10, 4, 6 → Mode = <strong>4</strong></p>
+
+<h3>2. Grouped Data</h3>
+<p>Formula for grouped data:</p>
+<pre>
+Mode = L + ((f1 - f0) / (2f1 - f0 - f2)) * h
+</pre>
+<ul>
+    <li>L = lower boundary of modal class</li>
+    <li>f1 = frequency of modal class</li>
+    <li>f0 = frequency before modal class</li>
+    <li>f2 = frequency after modal class</li>
+    <li>h = class width</li>
+</ul>
+<p><strong>Example:</strong></p>
+<table border="1">
+<tr><th>Class</th><th>Frequency</th></tr>
+<tr><td>0-10</td><td>5</td></tr>
+<tr><td>10-20</td><td>12</td></tr>
+<tr><td>20-30</td><td>8</td></tr>
+<tr><td>30-40</td><td>5</td></tr>
+</table>
+<p>Step 1: Modal class = 10-20 (f1 = 12, f0 = 5, f2 = 8)</p>
+<p>Step 2: Mode = 10 + ((12-5) / (2*12 - 5 - 8)) * 10 ≈ 16.36</p>
+
+<hr>
+
+<h2>Quartiles</h2>
+<p>Quartiles divide data into four equal parts:</p>
+<ul>
+    <li><strong>Q1:</strong> 25% of data lies below</li>
+    <li><strong>Q2 (Median):</strong> 50% of data lies below</li>
+    <li><strong>Q3:</strong> 75% of data lies below</li>
+</ul>
+
+<h3>Ungrouped Data</h3>
+<p>Formula:</p>
+<pre>
+Q1 = (n+1)/4 th value
+Q2 = Median
+Q3 = 3(n+1)/4 th value
+</pre>
+<p><strong>Example:</strong></p>
+<p>Data: 6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49</p>
+<p>Q1 = 3rd value = 15, Q2 = Median = 40, Q3 = 9th value = 43</p>
+
+<h3>Grouped Data</h3>
+<p>Formula:</p>
+<pre>
+Qk = L + ((k*n/4 - CF)/f) * h
+</pre>
+<ul>
+    <li>k = 1, 2, 3 for Q1, Q2, Q3 respectively</li>
+    <li>Other symbols as in median formula</li>
+</ul>
+
+</body>
+</html>
+

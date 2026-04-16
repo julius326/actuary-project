@@ -1,0 +1,1150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASIC MATHEMATICS</title>
+
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            margin: 30px;
+            background-color: #f9fafc;
+            color: #222;
+        }
+
+        h4 {
+            background: #1e293b;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 40px;
+        }
+
+        h5 {
+            color: #0f172a;
+            border-left: 5px solid #2563eb;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, div {
+            margin-bottom: 12px;
+        }
+
+        i {
+            color: #334155;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #cbd5e1;
+            margin: 25px 0;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table td {
+            border: 1px solid #94a3b8;
+            padding: 12px 18px;
+            text-align: center;
+            font-weight: bold;
+            background: #e0f2fe;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background: white;
+        }
+
+        q {
+            font-style: italic;
+            color: #475569;
+        }
+
+        strong, b {
+            color: #020617;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+<h2>BASIC MATHEMATICS</h2>
+<h4>RELATIONS AND FUNCTIONS</h4>
+<h5>Cartesian Products</h5>
+<p>
+    <i>Definition</i>
+    <div>
+    Let A and B be any two sets. Then the Cartesian product of A and B, denoted by <strong>A × B</strong>, is defined as:
+    <div>
+        A × B = { (a, b) | a ∈ A and b ∈ B }
+    </div>
+    <div>
+        For example: <br>
+        If A = {1, 2, a} and B = {x, y, z}, <br>
+        then A × B = { (1, x), (1, y), (1, z), (2, x), (2, y), (2, z), (a, x), (a, y), (a, z) }
+    </div>
+</div>
+
+<h5>RELATIONS</h5>
+<p>
+    <i>Definition:</i>
+    <div>
+        Let A and B be any two non-empty sets. Then every non-empty subset of <strong>A × B</strong> is called a <strong>relation</strong> from A to B.
+        In other words, a relation is a set of ordered pairs where the first element comes from A and the second from B.
+    </div>
+    <div>
+        <strong>Examples:</strong><br>
+        1. Let A = {1, 2, 3} and B = {x, y}. Then one possible relation R from A to B is:<br>
+        R = { (1, x), (2, y) }<br>
+        Another possible relation is the full Cartesian product:<br>
+        R = { (1, x), (1, y), (2, x), (2, y), (3, x), (3, y) }<br><br>
+
+        2. A relation on a single set (A = B) is often called a <strong>relation on A</strong>. For example:<br>
+        Let A = {1, 2, 3}. Then a relation R on A could be:<br>
+        R = { (1, 2), (2, 3), (3, 1) }<br><br>
+
+        3. Relations can also describe real-life connections. For example:<br>
+        Let A = {Students} = {Alice, Bob} and B = {Courses} = {Math, English}. Then the relation "is enrolled in" could be:<br>
+        R = { (Alice, Math), (Bob, English), (Alice, English) }
+    </div>
+    <div>
+        <strong>Notes:</strong><br>
+        - Relations can be <strong>one-to-one, one-to-many, many-to-one,</strong> or <strong>many-to-many</strong> depending on how elements of A relate to elements of B.<br>
+        - The total set of all possible relations from A to B is the <strong>power set</strong> of A × B.
+    </div>
+
+
+<h5>EQUIVALENT RELATIONS</h5>
+<i>Definition:</i>
+<div>
+    Let S be a set. A relation E, which is a subset of S × S, is called an <strong>equivalence relation</strong> on S if it satisfies the following three properties:
+    <ol>
+        <li>
+            <strong>Reflexive:</strong> (a, a) ∈ E for every a ∈ S.
+            <br>Symbolically: <strong>∀ a ∈ S, (a, a) ∈ E</strong>
+        </li>
+        <li>
+            <strong>Symmetric:</strong> If (a, b) ∈ E, then (b, a) ∈ E for all a, b ∈ S.
+            <br>Symbolically: <strong>∀ a, b ∈ S, (a, b) ∈ E ⇒ (b, a) ∈ E</strong>
+        </li>
+        <li>
+            <strong>Transitive:</strong> If (a, b) ∈ E and (b, c) ∈ E, then (a, c) ∈ E for all a, b, c ∈ S.
+            <br>Symbolically: <strong>∀ a, b, c ∈ S, (a, b) ∈ E ∧ (b, c) ∈ E ⇒ (a, c) ∈ E</strong>
+        </li>
+    </ol>
+</div>
+
+<div>
+    <strong>Notes:</strong><br>
+    - “∀” is the symbol for <e> for every</e> or <em>for all</em>.
+    - An equivalence relation partitions the set S into <strong>disjoint equivalence classes</strong>.
+</div>
+
+<div>
+    <strong>Example:</strong><br>
+    Let S = {1, 2, 3, 4} and define a relation E by a ~ b if a and b have the same parity (both even or both odd). Then:
+    <ul>
+        <li>E = {(1,1), (1,3), (3,1), (3,3), (2,2), (2,4), (4,2), (4,4)}</li>
+        <li>This relation is reflexive, symmetric, and transitive, so it is an equivalence relation.</li>
+    </ul>
+</div>
+
+<h5>PRODUCT OF FUNCTIONS</h5>
+<i>Definition:</i>
+<p>
+    <div>
+        Let f, g : ℝ → ℝ be two functions. The <strong>product of f and g</strong> is denoted by f · g (read as f dot g) and defined as:
+        <br>
+        <strong>(f · g)(x) = f(x) · g(x), ∀ x ∈ ℝ</strong>
+    </div>
+    <div>
+        <strong>Example:</strong><br>
+        If f(x) = 2x + 3 and g(x) = x² - 4, then:<br>
+        (f · g)(x) = (2x + 3)(x² - 4) = 2x³ - 8x + 3x² - 12 = 2x³ + 3x² - 8x - 12
+    </div>
+    <div>
+        <strong>Remark:</strong> The product of functions is <em>commutative</em>, i.e., f · g = g · f.
+    </div>
+
+
+<h5>COMPOSITION OF FUNCTIONS</h5>
+<i>Definition:</i>
+<p>
+    <div>
+        Let f, g : ℝ → ℝ be two functions. The <strong>composition of f and g</strong> is denoted by f ∘ g (read as f circle g) and defined as:
+        <br>
+        <strong>(f ∘ g)(x) = f(g(x)), ∀ x ∈ ℝ</strong>
+    </div>
+    <div>
+        <strong>Example:</strong><br>
+        Let f(x) = 5x + 1 and g(x) = 2x + 4. Then:<br>
+        (f ∘ g)(x) = f(g(x)) = f(2x + 4) = 5(2x + 4) + 1 = 10x + 21<br>
+        (g ∘ f)(x) = g(f(x)) = g(5x + 1) = 2(5x + 1) + 4 = 10x + 6
+    </div>
+    <div>
+        <strong>Remarks:</strong>
+        <ul>
+            <li>f · g = g · f → multiplication of functions is commutative.</li>
+            <li>f ∘ g ≠ g ∘ f → composition of functions is <strong>not commutative</strong> in general.</li>
+        </ul>
+    </div>
+
+<h5>INVERSE OF A FUNCTION</h5>
+<p>
+    <div>
+        To find the inverse of a function f(x):
+        <ol>
+            <li>Write y = f(x)</li>
+            <li>Swap x and y (make x the subject): solve for y in terms of x</li>
+            <li>Replace y with f⁻¹(x)</li>
+        </ol>
+    </div>
+    <div>
+        <strong>Example:</strong><br>
+        f(x) = 2x + 3<br>
+        y = 2x + 3 → solve for x: x = (y - 3)/2<br>
+        Therefore, f⁻¹(x) = (x - 3)/2 = ½(x - 3)
+    </div>
+    <div>
+        <strong>Remark:</strong><br>
+        A function f(x) is <strong>not defined</strong> at points where it is impossible to compute its value, such as:
+        <ul>
+            <li>Division by zero</li>
+            <li>Square root of a negative number (in ℝ)</li>
+        </ul>
+        <strong>Example:</strong> Let f: ℝ → ℝ, f(x) = 1/(x - 1). Then:<br>
+        - Domain: x ≠ 1 → D(f) = ℝ \ {1}<br>
+        - Range: R(f) = ℝ \ {0}
+    </div>
+
+
+<h5>ADDITIONAL IMPORTANT CONCEPTS</h5>
+<div>
+    <ul>
+        <li><strong>Domain of a function:</strong> Set of all x-values for which f(x) is defined.</li>
+        <li><strong>Range of a function:</strong> Set of all possible output values f(x).</li>
+        <li><strong>Identity function:</strong> f(x) = x. Its inverse is itself.</li>
+        <li><strong>Zero function:</strong> f(x) = 0 for all x ∈ ℝ.</li>
+        <li><strong>Composite functions and inverses:</strong> (f ∘ f⁻¹)(x) = x and (f⁻¹ ∘ f)(x) = x.</li>
+        <li><strong>Important remark:</strong> Not all functions have inverses. A function must be <strong>one-to-one (injective)</strong> and <strong>onto (surjective)</strong> to have an inverse.</li>
+    </ul>
+</div>
+
+<h4>COMPLEX NUMBERS</h4>
+
+<div>
+    <p>
+        Observe that the set ℝ of real numbers has no solution to the equation
+        x<sup>2</sup> + a = 0, ∀ a ∈ ℝ, when a &lt; 0,
+        since the square root of a negative number does not exist in ℝ.
+        Therefore, there is a need to extend the real number system to include
+        <b>complex numbers</b>.
+    </p>
+
+    <p>
+        Complex numbers are denoted by ℂ and defined as:
+        <br><br>
+        ℂ = { z : z = x + iy ; x, y ∈ ℝ and i<sup>2</sup> = −1 }
+    </p>
+
+    <div>
+        <b>REMARKS</b>
+        <ul>
+            <li>i is called the <b>imaginary unit</b></li>
+            <li>x is called the <b>real part</b> of z and is denoted by Re(z)</li>
+            <li>y is called the <b>imaginary part</b> of z and is denoted by Im(z)</li>
+            <li>If y = 0, then z is a real number</li>
+            <li>If x = 0, then z is a purely imaginary number</li>
+        </ul>
+    </div>
+
+    <h5>Basic Arithmetic of Complex Numbers</h5>
+
+    <p>
+        Let z<sub>1</sub> and z<sub>2</sub> be complex numbers such that
+        z<sub>1</sub> = a + ib,
+        z<sub>2</sub> = c + id,
+        where a, b, c, d ∈ ℝ.
+    </p>
+
+    <pre>
+i. Addition
+   z₁ + z₂ = (a + ib) + (c + id)
+           = (a + c) + i(b + d) ∈ ℂ
+   Hence ℂ is closed under addition.
+
+ii. Subtraction
+   z₁ − z₂ = (a + ib) − (c + id)
+           = (a − c) + i(b − d) ∈ ℂ
+   Hence ℂ is closed under subtraction.
+
+iii. Multiplication
+   z₁ · z₂ = (a + ib)(c + id)
+           = ac + iad + ibc + i²bd
+           = ac − bd + i(ad + bc) ∈ ℂ
+   Hence ℂ is closed under multiplication.
+    </pre>
+
+    <div>
+        <b>Example</b><br><br>
+        Let z<sub>1</sub> = −4 + 6i and z<sub>2</sub> = 3 − 5i.
+        <pre>
+z₁ + z₂ = (−4 + 6i) + (3 − 5i)
+        = −1 + i
+
+z₁ − z₂ = (−4 + 6i) − (3 − 5i)
+        = −7 + 11i
+
+z₁ · z₂ = (−4 + 6i)(3 − 5i)
+        = −12 + 20i + 18i − 30i²
+        = −12 + 38i + 30
+        = 18 + 38i
+        </pre>
+    </div>
+
+    <h5>Complex Conjugate</h5>
+    <p>
+        The complex conjugate of z = x + iy is defined as:
+        <br><br>
+        <b>z̄ = x − iy</b>
+    </p>
+
+    <div>
+        <b>Example</b><br>
+        If z = 3 + 4i, then z̄ = 3 − 4i
+    </div>
+
+    <h5>Division of Complex Numbers</h5>
+    <p>
+        To divide complex numbers, multiply the numerator and denominator
+        by the conjugate of the denominator.
+    </p>
+
+    <div>
+        <b>Example</b>
+        <pre>
+(2 + 3i) / (1 − i)
+
+Multiply numerator and denominator by (1 + i):
+
+= (2 + 3i)(1 + i) / (1 − i)(1 + i)
+= (2 + 2i + 3i + 3i²) / (1 − i²)
+= (2 + 5i − 3) / (1 + 1)
+= (−1 + 5i) / 2
+        </pre>
+    </div>
+
+    <div>
+        <b>IMPORTANT REMARKS</b>
+        <ul>
+            <li>∀ x ∈ ℝ, x = x + 0i, hence ℝ ⊂ ℂ</li>
+            <li>Complex numbers cannot be ordered like real numbers</li>
+            <li>ℂ is closed under addition, subtraction, multiplication, and division (except by zero)</li>
+        </ul>
+    </div>
+</div>
+<div>
+    <h5>ARGAND DIAGRAM</h5>
+
+<p>
+    An Argand diagram is a graphical representation of complex numbers.
+    The horizontal axis represents the real part and the vertical axis
+    represents the imaginary part.
+</p>
+
+<canvas id="argand" width="400" height="400"
+        style="border:1px solid black;"></canvas>
+
+<p>
+    Example: Plot the complex number
+    <b>z = 3 + 2i</b>
+</p>
+
+<script>
+    const canvas = document.getElementById("argand");
+    const ctx = canvas.getContext("2d");
+
+    const width = canvas.width;
+    const height = canvas.height;
+    const originX = width / 2;
+    const originY = height / 2;
+    const scale = 40; // 1 unit = 40 pixels
+
+    // Draw axes
+    ctx.beginPath();
+    ctx.moveTo(0, originY);
+    ctx.lineTo(width, originY); // Real axis
+    ctx.moveTo(originX, 0);
+    ctx.lineTo(originX, height); // Imaginary axis
+    ctx.stroke();
+
+    // Axis labels
+    ctx.font = "14px Arial";
+    ctx.fillText("Re", width - 30, originY - 5);
+    ctx.fillText("Im", originX + 5, 15);
+
+    // Complex number z = x + iy
+    const x = 3;  // real part
+    const y = 2;  // imaginary part
+
+    const plotX = originX + x * scale;
+    const plotY = originY - y * scale;
+
+    // Draw point
+    ctx.beginPath();
+    ctx.arc(plotX, plotY, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+
+    // Draw line from origin
+    ctx.beginPath();
+    ctx.moveTo(originX, originY);
+    ctx.lineTo(plotX, plotY);
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+
+    // Label point
+    ctx.fillText("z(3 + 2i)", plotX + 5, plotY - 5);
+</script>
+<ul>
+    <li>Each complex number z = x + iy is represented by a point (x, y)</li>
+    <li>The real part is measured along the horizontal axis</li>
+    <li>The imaginary part is measured along the vertical axis</li>
+    <li>The distance from the origin is the modulus |z|</li>
+</ul>
+<div>
+    <h5>SQUARE ROOT OF COMPLEX NUMBERS</h5>
+
+    <p>
+        The square roots of a complex number z are the complex numbers w such that
+        w² = z.
+        Every non-zero complex number has exactly two square roots.
+    </p>
+
+    <p>
+        Let z = a + ib.
+        Suppose √z = x + iy, where x, y ∈ ℝ.
+        Then:
+    </p>
+
+    <p>
+        (x + iy)² = a + ib
+        ⇒ x² − y² + 2ixy = a + ib
+    </p>
+
+    <p>
+        Equating real and imaginary parts:
+        <br>
+        x² − y² = a  &nbsp;&nbsp; (1)
+        <br>
+        2xy = b      &nbsp;&nbsp; (2)
+    </p>
+
+    <hr>
+
+    <b>Examples</b>
+
+    <p>
+        <b>i) Find √(2i)</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        Let √(2i) = x + iy
+        <br>
+        Then:
+        <br>
+        (x + iy)² = 2i
+        <br>
+        ⇒ x² − y² + 2ixy = 0 + 2i
+    </p>
+
+    <p>
+        Equating real and imaginary parts:
+        <br>
+        x² − y² = 0  &nbsp;&nbsp; (1)
+        <br>
+        2xy = 2      &nbsp;&nbsp; (2)
+    </p>
+
+    <p>
+        From (2): xy = 1
+        <br>
+        From (1): x² = y² ⇒ x = y
+    </p>
+
+    <p>
+        Hence:
+        <br>
+        x² = 1 ⇒ x = ±1
+        <br>
+        y = x
+    </p>
+
+    <p>
+        Therefore:
+        <br>
+        √(2i) = ±(1 + i)
+    </p>
+
+    <hr>
+
+    <p>
+        <b>ii) Find √(5 − 12i)</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        Let √(5 − 12i) = x + iy
+        <br>
+        Then:
+        <br>
+        (x + iy)² = 5 − 12i
+        <br>
+        ⇒ x² − y² + 2ixy = 5 − 12i
+    </p>
+
+    <p>
+        Equating real and imaginary parts:
+        <br>
+        x² − y² = 5  &nbsp;&nbsp; (1)
+        <br>
+        2xy = −12    &nbsp;&nbsp; (2)
+    </p>
+
+    <p>
+        From (2): xy = −6
+    </p>
+
+    <p>
+        Try x = 3, y = −2:
+        <br>
+        x² − y² = 9 − 4 = 5 ✓
+        <br>
+        xy = −6 ✓
+    </p>
+
+    <p>
+        Hence:
+        <br>
+        √(5 − 12i) = ±(3 − 2i)
+    </p>
+
+    <hr>
+
+    <b>Important Remarks</b>
+    <ul>
+        <li>Every non-zero complex number has exactly two square roots.</li>
+        <li>If w is a square root of z, then −w is also a square root of z.</li>
+        <li>Square roots of complex numbers are generally not unique.</li>
+        <li>Solving by equating real and imaginary parts is the standard method.</li>
+    </ul>
+</div>
+
+    <div>
+    <h5>COMPLEX ROOTS OF QUADRATIC EQUATIONS</h5>
+
+    <p>
+        A quadratic equation of the form
+        <br>
+        ax<sup>2</sup> + bx + c = 0, &nbsp; a ≠ 0
+        <br>
+        may have complex roots when its discriminant is negative.
+    </p>
+
+    <p>
+        The discriminant is given by:
+        <br>
+        Δ = b<sup>2</sup> − 4ac
+    </p>
+
+    <p>
+        If Δ &lt; 0, then the roots of the equation are complex conjugates.
+    </p>
+
+    <hr>
+
+    <b>Example</b>
+
+    <p>
+        Solve:
+        <br>
+        x<sup>2</sup> + 1 = 0
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        Comparing with ax<sup>2</sup> + bx + c = 0:
+        <br>
+        a = 1, &nbsp; b = 0, &nbsp; c = 1
+    </p>
+
+    <p>
+        Discriminant:
+        <br>
+        Δ = b<sup>2</sup> − 4ac
+        <br>
+        Δ = 0 − 4(1)(1)
+        <br>
+        Δ = −4 &lt; 0
+    </p>
+
+    <p>
+        Hence, the roots are complex.
+    </p>
+
+    <p>
+        Using the quadratic formula:
+        <br>
+        x =
+        <span>
+            −b ± √(b<sup>2</sup> − 4ac)
+        </span>
+        /
+        <span>
+            2a
+        </span>
+    </p>
+
+    <p>
+        x = ± √(−4) / 2
+        <br>
+        x = ± 2i / 2
+        <br>
+        x = ± i
+    </p>
+
+    <p>
+        Therefore, the complex roots are:
+        <br>
+        x = i  and  x = −i
+    </p>
+
+    <hr>
+
+    <b>Important Remarks</b>
+    <ul>
+        <li>Quadratic equations with negative discriminant have no real roots.</li>
+        <li>Such equations have two complex conjugate roots.</li>
+        <li>If a + bi is a root, then a − bi is also a root.</li>
+        <li>The roots lie symmetrically about the real axis on the Argand diagram.</li>
+    </ul>
+</div>
+
+</div>
+<div>
+   <h4>PERMUTATION AND COMBINATION</h4>
+
+<div>
+    <h5>PERMUTATION</h5>
+
+    <p>
+        Assume we have three items A, B, and C and we want to arrange them in a row.
+        <br>
+        How many different ways can we arrange them?
+    </p>
+
+    <p>
+        A <b>permutation</b> is the total number of different ways of arranging objects
+        where <b>order matters</b>.
+    </p>
+
+    <i>Solution</i>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+    </table>
+
+    <p>
+        Total arrangements = 3 × 2 × 1 = 6
+    </p>
+
+    <p>
+        <b>Definition:</b><br>
+        A permutation of a given number of objects is an arrangement of these objects
+        in a definite order.
+    </p>
+
+    <hr>
+
+    <h5>FACTORIAL NOTATION</h5>
+
+    <p>
+        The product of n consecutive natural numbers from 1 to n is denoted by n!
+        and is called <b>factorial n</b>.
+    </p>
+
+    <p>
+        n! = n(n − 1)(n − 2) … 3 × 2 × 1
+    </p>
+
+    <p>
+        Examples:
+        <br>
+        5! = 5 × 4 × 3 × 2 × 1 = 120
+        <br>
+        0! = 1
+    </p>
+
+    <hr>
+
+    <h5>PERMUTATION OF n OBJECTS TAKEN r AT A TIME (r ≤ n)</h5>
+
+    <p>
+        The permutation of n objects taken r at a time is denoted by <b>nPr</b>
+        and is defined as:
+    </p>
+
+    <p>
+        nPr = n! / (n − r)!
+    </p>
+
+    <div>
+        <b>Example:</b>
+        <p>
+            In how many ways can 8 books be arranged on 4 shelves?
+        </p>
+
+        <i>Solution</i>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>8</td>
+                <td>7</td>
+                <td>6</td>
+                <td>5</td>
+            </tr>
+        </table>
+
+        <pre>
+n = 8
+r = 4
+
+nPr = 8P4 = 8! / (8 − 4)!
+     = 8! / 4!
+     = (8 × 7 × 6 × 5)
+     = 1680
+        </pre>
+    </div>
+
+    <hr>
+
+    <h5>PERMUTATION OF n OBJECTS NOT ALL DISTINCT</h5>
+
+    <p>
+        If n objects consist of n₁ identical objects of one kind,
+        n₂ identical objects of a second kind, …, nk identical objects
+        of the kth kind, then the number of distinct permutations is:
+    </p>
+
+    <pre>
+n! / (n₁! n₂! … nk!)
+    </pre>
+
+    <hr>
+
+    <h5>WORKED EXAMPLES</h5>
+
+    <p><b>i) DEFEAT</b></p>
+    <p>
+        Total letters = 6
+        <br>
+        E appears twice
+    </p>
+
+    <pre>
+Number of arrangements = 6! / 2!
+                        = 360
+    </pre>
+
+    <p><b>ii) ARRANGE</b></p>
+    <p>
+        Total letters = 7
+        <br>
+        A appears twice
+        <br>
+        R appears twice
+    </p>
+
+    <pre>
+Number of arrangements = 7! / (2! × 2!)
+                        = 1260
+    </pre>
+
+    <p><b>iii) KISII</b></p>
+    <p>
+        Total letters = 5
+        <br>
+        I appears three times
+    </p>
+
+    <pre>
+Number of arrangements = 5! / 3!
+                        = 20
+    </pre>
+
+    <p><b>iv) PERMUTATION</b></p>
+    <p>
+        Total letters = 11
+        <br>
+        T appears twice
+    </p>
+
+    <pre>
+Number of arrangements = 11! / 2!
+                        = 19,958,400
+    </pre>
+
+    <hr>
+
+    <h5>IMPORTANT REMARKS</h5>
+    <ul>
+        <li>Order matters in permutations.</li>
+        <li>Factorials grow very fast.</li>
+        <li>Repeated objects reduce the total number of permutations.</li>
+        <li>nPr is not equal to nCr.</li>
+    </ul>
+</div>
+</div>
+<div>
+    <h5>PERMUTATION OF OBJECTS WITH RESTRICTIONS</h5>
+
+    <p>
+        In some permutation problems, certain conditions (restrictions) must be satisfied.
+        These conditions limit the total number of possible arrangements.
+    </p>
+
+    <hr>
+
+    <i>Example 1</i>
+
+    <p>
+        How many numbers greater than 2000 can be formed from the digits 1, 2, 3, and 4
+        if each digit is used only once?
+    </p>
+
+    <p>
+        <b>i) Even numbers greater than 2000</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        For the number to be:
+    </p>
+    <ul>
+        <li>Greater than 2000 ⇒ the first digit must be 2, 3, or 4</li>
+        <li>Even ⇒ the last digit must be 2 or 4</li>
+    </ul>
+
+    <p>
+        Possible cases:
+    </p>
+
+    <p>
+        <b>Case 1:</b> Last digit = 2
+        <br>
+        Remaining digits = {1, 3, 4}
+        <br>
+        First digit cannot be 1 (number would be &lt; 2000)
+        <br>
+        Choices for first digit = 3 or 4 (2 ways)
+        <br>
+        Remaining two digits can be arranged in 2! ways
+    </p>
+
+    <p>
+        Total = 2 × 2! = 4
+    </p>
+
+    <p>
+        <b>Case 2:</b> Last digit = 4
+        <br>
+        Remaining digits = {1, 2, 3}
+        <br>
+        First digit cannot be 1
+        <br>
+        Choices for first digit = 2 or 3 (2 ways)
+        <br>
+        Remaining two digits can be arranged in 2! ways
+    </p>
+
+    <p>
+        Total = 2 × 2! = 4
+    </p>
+
+    <p>
+        <b>Total even numbers greater than 2000 = 4 + 4 = 8</b>
+    </p>
+
+    <hr>
+
+    <p>
+        <b>ii) Odd numbers greater than 2000</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        For an odd number, the last digit must be 1 or 3.
+    </p>
+
+    <p>
+        <b>Case 1:</b> Last digit = 1
+        <br>
+        Remaining digits = {2, 3, 4}
+        <br>
+        First digit must be 2, 3, or 4 (3 ways)
+        <br>
+        Remaining two digits arranged in 2! ways
+    </p>
+
+    <p>
+        Total = 3 × 2! = 6
+    </p>
+
+    <p>
+        <b>Case 2:</b> Last digit = 3
+        <br>
+        Remaining digits = {1, 2, 4}
+        <br>
+        First digit cannot be 1
+        <br>
+        Choices = 2 or 4 (2 ways)
+        <br>
+        Remaining digits in 2! ways
+    </p>
+
+    <p>
+        Total = 2 × 2! = 4
+    </p>
+
+    <p>
+        <b>Total odd numbers greater than 2000 = 6 + 4 = 10</b>
+    </p>
+
+    <hr>
+
+    <p>
+        <b>iii) Numbers greater than 3000</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        First digit must be 3 or 4 (2 ways).
+        <br>
+        Remaining three digits can be arranged in 3! ways.
+    </p>
+
+    <p>
+        Total = 2 × 3! = 12
+    </p>
+
+    <hr>
+
+    <i>Example 2</i>
+
+    <p>
+        How many permutations can be formed from the word <b>ADDING</b>:
+        <br>
+        (a) when the two D's are together
+        <br>
+        (b) when the two D's are not together
+    </p>
+
+    <p>
+        Total letters in ADDING = 6
+        <br>
+        D appears twice
+    </p>
+
+    <hr>
+
+    <p>
+        <b>(a) When the two D's are together</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        Treat the two D's as one unit (DD).
+        <br>
+        Objects: DD, A, I, N, G → 5 objects
+    </p>
+
+    <p>
+        Number of permutations:
+    </p>
+
+    <pre>
+5! = 120
+    </pre>
+
+    <p>
+        <b>Total arrangements = 120</b>
+    </p>
+
+    <hr>
+
+    <p>
+        <b>(b) When the two D's are not together</b>
+    </p>
+
+    <i>Solution</i>
+
+    <p>
+        First find total permutations without restriction:
+    </p>
+
+    <pre>
+Total = 6! / 2! = 360
+    </pre>
+
+    <p>
+        Subtract arrangements where D's are together:
+    </p>
+
+    <pre>
+Required = 360 − 120 = 240
+    </pre>
+
+    <p>
+        <b>Total arrangements = 240</b>
+    </p>
+
+    <hr>
+
+    <h5>IMPORTANT REMARKS</h5>
+    <ul>
+        <li>Restrictions reduce the total number of permutations.</li>
+        <li>“Together” problems use the block (grouping) method.</li>
+        <li>“Not together” = total arrangements − together arrangements.</li>
+        <li>Always check digit conditions (even, odd, size).</li>
+    </ul>
+</div>
+<div>
+    <h5>COMBINATIONS</h5>
+
+    <p>
+        Assume we have 5 paintings available and only 3 of them can be displayed.
+        <br>
+        In how many different ways can we select the 3 paintings if the order does not matter?
+    </p>
+
+    <p>
+        A <b>combination</b> is a selection of objects where the order of selection does not matter.
+    </p>
+
+    <hr>
+
+    <p>
+        If we have n objects from which we select r objects (where r &lt; n),
+        then the number of possible combinations is denoted by <b>nCr</b> and defined as:
+    </p>
+
+    <p>
+        nCr = nPr / r! = n! / (n − r)! r!
+    </p>
+
+    <p>
+        <b>Note:</b>
+        <q>
+            Every combination is a permutation, but not every permutation is a combination.
+        </q>
+    </p>
+
+    <hr>
+
+    <i>Solution</i>
+
+    <pre>
+n = 5
+r = 3
+
+5C3 = 5P3 / 3!
+     = (5! / (5 − 3)!) / 3!
+     = 5! / (2! 3!)
+     = (5 × 4 × 3 × 2 × 1) / (2 × 1 × 3 × 2 × 1)
+     = 10
+    </pre>
+
+    <p>
+        Therefore, the number of ways of selecting the 3 paintings is <b>10</b>.
+    </p>
+
+    <hr>
+
+    <h5>Additional Examples</h5>
+
+    <p>
+        <b>Example 2:</b><br>
+        In how many ways can a committee of 4 people be chosen from a group of 10 people?
+    </p>
+
+    <pre>
+10C4 = 10! / (6! 4!)
+     = 210
+    </pre>
+
+    <p>
+        <b>Example 3:</b><br>
+        How many ways can 2 cards be chosen from a pack of 52 cards?
+    </p>
+
+    <pre>
+52C2 = 52! / (50! 2!)
+     = 1326
+    </pre>
+
+    <hr>
+
+    <h5>Important Remarks</h5>
+    <ul>
+        <li>Order does not matter in combinations.</li>
+        <li>nCr = nC(n − r).</li>
+        <li>nC0 = nCn = 1.</li>
+        <li>nCr is always a whole number.</li>
+    </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Probability Notes</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        h1, h2, h3{
+            color: #1b4f72;
+        }
+        pre{
+            background: #f4f6f7;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        table{
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td{
+            border: 1px solid #555;
+            padding: 8px;
+        }
+        hr{
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Probability</h1>
+
+<h2>Sample Space</h2>
+<p>
+<i>Sample space (S)</i> is the set of all possible outcomes of an experiment.
+</p>
+
+<p><b>Example:</b><br>
+If two babies are selected and the sex of each baby is observed:
+</p>
+
+<pre>
+S = {MM, FF, MF, FM}
+</pre>
+
+<p>
+Sample space may be:
+<ul>
+<li><b>Finite</b> – limited outcomes (e.g., dice)</li>
+<li><b>Infinite</b> – unlimited outcomes (e.g., measuring height)</li>
+</ul>
+</p>
+
+<p>
+A sample space is:
+<ul>
+<li><b>Discrete</b> if outcomes are countable (1,2,3,...)</li>
+<li><b>Continuous</b> if outcomes lie in intervals (5 &lt; x &lt; 9)</li>
+</ul>
+</p>
+
+<h2>Event</h2>
+<p>
+An event E is any subset of the sample space including the empty set and S itself.
+</p>
+
+<pre>
+If E contains m outcomes and total outcomes are n:
+
+P(E) = m / n
+</pre>
+
+<p>0 ≤ P(E) ≤ 1</p>
+
+<h3>Example</h3>
+<p>
+Out of 751 graduates, 383 were not employed in their major.
+Probability that a graduate works outside their major:
+</p>
+
+<pre>
+P = 383 / 751 = 0.51
+</pre>
+
+<hr>
+
+<h2>Conditional Probability</h2>
+
+<p>
+Conditional probability of A given B:
+</p>
+
+<pre>
+P(A | B) = P(A ∩ B) / P(B)
+</pre>
+
+<h3>Example (Completed)</h3>
+
+<p>
+Given:
+<ul>
+<li>P(W) = 0.4</li>
+<li>P(H) = 0.1</li>
+<li>P(H ∩ W) = 0.08</li>
+</ul>
+</p>
+
+<p><b>(1) Probability wife attends given husband attends:</b></p>
+
+<pre>
+P(W | H) = P(W ∩ H) / P(H)
+= 0.08 / 0.1
+= 0.8
+</pre>
+
+<p><b>(2) Probability both attend:</b></p>
+
+<pre>
+P(W ∩ H) = 0.08
+</pre>
+
+<hr>
+
+<h2>Random Variables</h2>
+
+<p>
+A <b>random variable (X)</b> assigns numerical values to outcomes.
+</p>
+
+<h3>1. Discrete Random Variable</h3>
+
+<p>Takes countable values.</p>
+
+<pre>
+Mean:     E(X) = Σ x P(x)
+Variance: Var(X) = Σ (x - μ)² P(x)
+</pre>
+
+<h3>2. Continuous Random Variable</h3>
+
+<p>Takes values over intervals.</p>
+
+<pre>
+Mean:     E(X) = ∫ x f(x) dx
+Variance: Var(X) = ∫ (x - μ)² f(x) dx
+</pre>
+
+<hr>
+
+<h2>Bernoulli Distribution</h2>
+
+<p>
+X ~ Bernoulli(p)
+</p>
+
+<pre>
+P(X = x) = p^x (1 - p)^(1 - x)
+Where x = 0 or 1
+</pre>
+
+<pre>
+Mean = p
+Variance = p(1 - p)
+</pre>
+
+<h3>Example</h3>
+
+<p>
+5 good oranges, 15 bad. Total = 20
+</p>
+
+<pre>
+p = 5/20 = 1/4
+
+Mean = 1/4
+Variance = (1/4)(3/4) = 3/16
+</pre>
+
+<hr>
+
+<h2>Binomial Distribution</h2>
+
+<p>
+If X is number of successes in n independent Bernoulli trials:
+</p>
+
+<pre>
+X ~ Bin(n, p)
+
+P(X = x) = C(n, x) p^x (1 - p)^(n - x)
+</pre>
+
+<pre>
+Mean = np
+Variance = np(1 - p)
+</pre>
+
+<h3>Example</h3>
+
+<p>
+A coin is tossed 5 times. Find probability of exactly 3 heads.
+</p>
+
+<pre>
+n = 5, p = 1/2
+
+P(X=3) = C(5,3)(1/2)^3(1/2)^2
+= 10 * (1/32)
+= 10/32
+= 0.3125
+</pre>
+
+<hr>
+
+<h2>Poisson Distribution</h2>
+
+<p>
+Used for rare events in fixed interval.
+</p>
+
+<pre>
+X ~ Poisson(λ)
+
+P(X = x) = (e^-λ λ^x) / x!
+</pre>
+
+<pre>
+Mean = λ
+Variance = λ
+</pre>
+
+<h3>Example</h3>
+
+<p>
+If average accidents per day = 2, find probability of 3 accidents.
+</p>
+
+<pre>
+λ = 2
+
+P(X=3) = e^-2 (2^3) / 3!
+= (0.1353 * 8) / 6
+= 1.0824 / 6
+= 0.1804
+</pre>
+
+<hr>
+
+<h2>Normal Distribution</h2>
+
+<p>
+X ~ N(μ, σ²)
+</p>
+
+<pre>
+f(x) = (1 / √(2πσ²)) e^(-(x - μ)² / 2σ²)
+</pre>
+
+<pre>
+Mean = μ
+Variance = σ²
+</pre>
+
+<h3>Standard Normal</h3>
+
+<pre>
+Z = (X - μ) / σ
+</pre>
+
+<h3>Example</h3>
+
+<p>
+If μ = 100, σ = 10, find probability X &lt; 110.
+</p>
+
+<pre>
+Z = (110 - 100) / 10
+= 1
+
+From Z-table:
+P(Z &lt; 1) = 0.8413
+</pre>
+
+<hr>
+
+<h2>Important Notes</h2>
+
+<ul>
+<li>Capital letters denote random variables (X, Y).</li>
+<li>Lowercase letters denote specific values (x, y).</li>
+<li>0 ≤ P(A) ≤ 1</li>
+<li>Total probability of sample space = 1</li>
+<li>Var(X) = E(X²) − [E(X)]²</li>
+</ul>
+
+</body>
+</html>

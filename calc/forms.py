@@ -1,5 +1,5 @@
-# calc/forms.py
 from django import forms
+from .models import Usermedia
 
 
 class FrequencyForm(forms.Form):
@@ -14,3 +14,12 @@ class FrequencyForm(forms.Form):
 
     x4 = forms.FloatField(label="Value 4 (x4)")
     f4 = forms.IntegerField(label="Frequency 4 (f4)")
+
+
+
+class UsermediaForm(forms.ModelForm):
+    Password = forms.CharField(widget=forms.PasswordInput)  # hide input
+
+    class Meta:
+        model = Usermedia
+        fields = ['Name', 'Email', 'Password', 'Phone_number']  # match exactly

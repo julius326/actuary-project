@@ -1,0 +1,535 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INTRODUCTION TO ACTUARIAL SCIENCE</title>
+
+ <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            margin: 30px;
+            background-color: #f9fafc;
+            color: #222;
+        }
+
+        h4 {
+            background: #1e293b;
+            color: white;
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 40px;
+        }
+
+        h5 {
+            color: #0f172a;
+            border-left: 5px solid #2563eb;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        p, div {
+            margin-bottom: 12px;
+        }
+
+        i {
+            color: #334155;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #cbd5e1;
+            margin: 25px 0;
+        }
+
+        pre {
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table td {
+            border: 1px solid #94a3b8;
+            padding: 12px 18px;
+            text-align: center;
+            font-weight: bold;
+            background: #e0f2fe;
+        }
+
+        canvas {
+            display: block;
+            margin: 20px auto;
+            background: white;
+        }
+
+        q {
+            font-style: italic;
+            color: #475569;
+        }
+
+        strong, b {
+            color: #020617;
+        }
+
+        .box {
+            background: #f1f5f9;
+            padding: 15px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>INTRODUCTION TO ACTUARIAL SCIENCE</h1>
+    <I>Actuarial science</I> - is the discipline that applies mathematical,statistical<br>
+    or financial theory to access risks.<br><br>
+    <h5>Insurance Act</h5>
+    <pre>
+        a) A Fellow of the
+            Institute of Actuaries in England, or
+            Faculty of Actuaries in Scotland, or
+            Society of Actuaries in USA
+        b) such other person having actuarial knowledge as the Commissioner may, on
+            application of a member of the industry, approve.
+    </pre>
+    <h5>Retirement Benefits Act</h5>
+    <pre>
+        a) A Fellow of the
+            Institute of Actuaries in England, or
+            Faculty of Actuaries in Scotland, or
+            Society of Actuaries in USA, or
+            Canadian Institute of Actuaries, or
+            Institute of Actuaries of Japan, or
+            Institute of Actuaries of Australia
+        b) person holding such equivalent qualification as the Board may, by notice in
+            the Gazette, prescribe
+    </pre>
+    <b>Branches of Actuarial Science</b>
+    <ul>
+        <li>Health Insurance</li>
+        <li>Life Insurance</li>
+        <li>General Insurance</li>
+        <li>Pensions</li>
+        <li>Investment</li>
+        <li>Enterprise Risk Management</li>
+    </ul>
+    <p><i>Qualified actuary</i> is a professional trained in evaluating the current financial implications for<br>
+    future contigents events.<br>
+        <b>Role of proffesional bodies</b>
+        <ul>
+    <li>Educational training</li>
+    <li>Relevant experience</li>
+    <li>Professional standards of practice</li>
+    <li>Obligations for professional conduct</li>
+</ul>
+    </p>
+    <b>Roles of actuaries</b>
+    <ul>
+        <li>Risk Management</li>
+        <li>Product pricing</li>
+        <li>Reserving</li>
+        <li>Investment strategies</li>
+        <li>Pension funds management</li>
+        <li>insurance i.e Life ,General c,Health</li>
+    </ul>
+    <b>Pathway to become an actuary</b>
+    <ul>
+        <li>Bsc degree - any degree</li>
+        <li>Professional papers -<pre>
+           . IFoA
+            1 Complete IFoA exams or obtain exemptions
+            -Core Principles subjects – CS1, CS2,CM1, CM2, CB1, CB2, CB3
+            -Core practices subjects – CP1, CP2, CP3
+            -Two specialists Principles subjects – SP0, SP1, SP2, SP3, SP4, SP5,
+              SP6, SP7, SP8 and SP9
+            2 Meet personal and professional development (PPD) requirements
+            -Effective communications
+            -Problem solving and decision making
+            -Professionalism
+        </pre></li>
+    </ul>
+    <div>
+        <h4>Insurance</h4>
+        <p>Is a risk management technique under which insured conservatively cover the risk <br> which may arise on account of some unforeseen event or losses in the future </p>
+        <p>Is a financial contract in which the insured receives financial protection against any loss.<br>
+            It involves the insurer and insured(2 parties )
+        <br>
+        where the insured recieves financial protection<br>
+        <i>Risk</i> is the possibility of a loss or damage.<br>
+            <b>Risk management</b><br>
+            Risk can be managed in a number of ways:
+            <ul>
+                <li>Avoid the risk</li>
+                <li>Reduce the risk</li>
+                <li>Retain the risk</li>
+                <li>Transfer the risk</li>
+            </ul>
+        <strong>Characteristics of Insurable Risk: </strong>
+        <ul>
+            <li>Fortuitous in nature</li>
+            <li>Monetary value</li>
+            <li>Insurable interest</li>
+            <li>Homogeneous exposure</li>
+            <li>Public policy</li>
+        </ul>
+        <strong>Types of insurance Contracts</strong>
+        <ul>
+            <li><b>Life Insurance</b> - Designed to provide protection against 2 <br> distinct risks i.e Premature death and longevity
+            eg <ol>
+                    <li>Whole life insurance</li>
+                    <li>Pure endowment</li>
+                    <li>Term assurance</li>
+                    <li>Endowment assurance</li>
+                    <li>Annuity</li>
+                </ol>
+
+            </li>
+            <li><b>Health insurance</b> - This is insurance against loss by sickness or accidental bodily injury<br>
+            e.g <ol>
+                    <li>Disability income insurance</li>
+                    <li>Accidental death insurance</li>
+                    <li>Medical insurance</li>
+                </ol>
+            </li>
+            <li> <b>Property or liability insurance</b> - Consists of those forms of insurance designed to protect against losses<br> resulting from damage
+            to or loss of property and losses rising from legal liability <br>
+                Eg <ol>
+                    <li>Property insurance</li>
+                    <li>Marine insurance</li>
+                    <li>Motor insurance</li>
+                    <li>Workers compensation insurance</li>
+                    <li>Burglary, robbery and theft insurance</li>
+                </ol>
+            </li>
+        </ul>
+
+        </p>
+        <div>
+            <b>Principles(Fundamentals) of Insurance</b>
+            <uL>
+                <li>At most good faith</li>
+                <li>Insurable interest - The risk for insurance has to be the interest you have </li>
+                <li>Indemnity - Compensate to the loss but only to the extend of the lose you suffered </li>
+                <li>Subrogation - Insurance company step into your issue at the cost of the claim and recover the cost</li>
+                <li>Contribution - Protects the insurer</li>
+                <li>Proximate cause</li>
+            </uL>
+            <strong>Importance of the insurance to the economy </strong>
+            <ul>
+                <li>Provide risk protections</li>
+                <li>Enables business to take more risks</li>
+                <li>Stabilizes individual consuption</li>
+                <li>Act as major source of investment capital</li>
+            </ul>
+            <strong>Players in the insurance company</strong>
+            <ul>
+                <li>Insurance company - These are insurers who protect against any loss from the 3 broad categories aforementioned</li>
+                <li>Insurance regulator</li>
+                <li>Policy holder</li>
+                <li>Agents</li>
+                <li>Reinsurer</li>
+                <li>Underwriters</li>
+                <li>Investigators</li>
+                <li>Adjusters</li>
+            </ul>
+            <strong>Role of actuaries in insurance </strong>
+            <ul>
+                <li>Risk assesment and pricings</li>
+                <li>Reserving</li>
+                <li>Product development</li>
+                <li>Financial modelling</li>
+                <li>Regular compliance</li>
+                <li>Strategic planning</li>
+            </ul>
+            <i>Specializations:
+
+    Life & Health: Focus on mortality, morbidity, long-term care, and predicting life expectancy and healthcare costs.<br>
+    Property & Casualty (P&C): Analyze risks from natural disasters, accidents, and property damage, often tied to geographic location.<br>
+
+In essence, actuaries act as the financial backbone of insurance, using data and complex modeling to balance risk and reward, making uncertain future events financially predictable and manageable for both insurers and policyholders</i>
+        </div>
+        <div>
+            <h4>Pensions</h4>
+            <b>Importance</b>
+            <ul>
+                <li>Maintain livelihood</li>
+                <li>Improve life expectancy</li>
+            </ul>
+            <h5>Retirement benefits schemes</h5>
+            <ol>
+                -Defined benefits - Provides predetermined pension benefits at retirement.<br>
+                (Gross * %) * n
+                where n is years<br>
+
+                -Defined contribution(NSSF) - This is the contribution between the employer and employee.<br>
+
+                -Hybrid
+            </ol>
+            <strong>Players in pensions</strong>
+           <pre>
+               Government through the regulators
+               Employees
+               Trustees
+               Administrators
+               Fund managers
+               Custodians - makes sure money is kept out of regulor operations.
+               Insurance company
+           </pre>
+        </div>
+        <div>
+            <h4>Intro to interest rates</h4>
+            <p><i>Interest</i> is the compensation for money used </p>
+            <p> % of that reward </p>
+            <pre>
+                Interest Rate
+                   /      \
+                simple    Compound
+            </pre>
+            <strong> Type of interest rates</strong>
+            <ol>
+                <li>Nominal -> Quoted before inflation</li>
+                <li>Real -> Inflation adjusted
+                real = nominal - pie
+                </li>
+                <li>Fixed Rate -> Remains constant </li>
+                <li>Variable rate -> change depending on a benchmark </li>
+                <li>Simple interest ->  I= Principle * Rate * Time</li>
+                <li> Compound interest -> P(1+r/100)^n</li>
+                <li>Discount rate -> Rate used to determine present value</li>
+                <li>Risk-free rate -> used for riskless investment</li>
+                <pre>
+                    *Effective(i) -> Actual rate per period
+                    Discount (d) -> d = 1/(1+i)
+
+                    *Force of interest (d) -> d = ln(1+i) -> e<sup>d</sup> = 1+i => i = e<sup>d</sup> - 1
+
+                    *Nominal rate i<sup>m</sup> -> i<sup>m</sup> = m[ (1+i)<sup>1/m</sup> -1]
+                </pre>
+{#                Draw a graph showing simple and compound interest#}
+                <h5>Application of interest rate in actuarial science</h5>
+                <ol>
+                    <li>Valuation of insurance liabilities</li>
+                    <li>Premium calculator</li>
+                    <li>Pensions</li>
+                    <li>Risk assessment and pricings</li>
+                    <li>Product development</li>
+                    <li>Invetsment strategies</li>
+                </ol>
+
+            </ol>
+            <h4>Investments</h4>
+            <strong>Principle of investments</strong>
+            <ol>
+            <li>Relationship between risk(s.d) and returns(mean)
+            Expected mean = E(r)
+{#                please write the formula for expected returns#}
+            </li>
+                <li> Time value money</li>
+                <li>Diversification to spreading investment
+{#                draw the graph please#}
+                </li>
+
+            </ol>
+            <h5> Type of investments</h5>
+            <ol>
+                <li>Stocks</li>
+                <li>Bonds (fixed income security)</li>
+                <li>Money market : <ul>
+                    <li>Mutual funds</li>
+                    <li>Exchange trade funds</li>
+                    <li>Options</li>
+                    <li>Futures and forwards</li>
+                    <li>Swaps</li>
+                </ul></li>
+            </ol>
+            <h5> Role of investment</h5>
+            <ul>
+                <li>Asset liability management</li>
+                <li>Risk management</li>
+                <li>Investment strategy development</li>
+                <li>Regulatory compliance</li>
+            </ul>
+        </div>
+        <div>
+            <h5>Accumulation and discount factors</h5>
+            <p>Accumulation factor is denoted by a(t) or A(t<sub>1</sub>, t<sub>2</sub>)</p>
+            <pre>
+                a(t) = (Value @ t)/(Value @ 0) => (1*a(t))/1
+
+                Simple : a(t) = (1+i*t)
+                Compound : a(t) = (1+i)<sup>t</sup>
+            </pre>
+            <p>Discount factor is denoted by v(t)</p>
+            <pre>
+                v(t) = (Value @ 0)/(Value @ t) = 1/a(t)
+
+                Simple : a(t) = (1+it) =>  v(t) = 1/(1 + it)
+                Compuond : a(t) = (1+i)<sup>t</sup> => v(t) = 1/(1+i)<sup>t</sup> = V<sup>t</sup>
+            </pre>
+            <div>
+                Example
+                <Pre>
+                    Sue takes a short term loan of 50,000/= .The lender charges a simple interest
+                    of  8% p.a for 2 years .Find the
+                    i) Accumulation factor
+                    ii)The total amount to be repaid
+
+                    sln
+                    <pre>
+                        i) a(t) = (1+i*t) = (1 + 0.08 * 2) = 1.16
+
+                        ii) F = 50,000 * 1.16 = 58,0000/=
+                    </pre>
+                </Pre>
+            </div>
+            <div>
+                <h4>Valuation of cash flows </h4>
+                <p>
+                    <i>Cash flows : </i>is the movement of money in and out of a business over aspecific period of time<br>
+
+                    .Positive cash flows (inflows)
+                    .negative cash flows (outflows)
+
+                    <b>Types of cash flows</b><br>
+                    <ul>
+                    <li>Operating cash flows</li>
+                    <li>Investing cash flows</li>
+                    <li>Financing cash flows</li>
+                    </ul>
+                <strong> How do we value cash flows </strong><br>
+                <ol>
+                    <li>Discount cash flow analysis<br>
+                        <img src="{% static 'images/NPV.png' %}">
+                    </li>
+                <b>eg</b>
+                <p>
+                    A retail shop expects to generate cash inflow of 80,000/= next year<br> the discount rate is 8% .Find the p.v
+                <div>
+                sln<br>
+                pv = CF/(1+r)^t  = 80000/(1+0.08)^1  = 74074.07
+            </div>
+                </p>
+                    <li>
+                        Net Present value (NPV)- similar to Discounted cash flows(DCF) but accounts for initial investments<br>
+                        <pre>
+                            <img src = {% static 'images/DCF.png' %}>
+                        </pre>
+                        <div>
+                            <b>eg</b><br>
+                           A farmer invests 200,000/= in irrigation equipment.Expected annual cash inflow are 90,000/= for 3 years<br>
+                            The discount rate is 12%.Find the NPV
+                            <pre>
+                                <b>sln</b><br>
+                                <img src="{% static 'images/NPV2.png' %}">
+                                -20,000 + 90000{ 1/(1.12)<sup>1</sup> + 1/(1.12)<sup>2</sup> + 1/(1.12)<sup>3</sup>}
+                            </pre>
+                        </div>
+                    </li>
+                    <li>
+                        Internal rate of returns(IRR) -> is the discount rate that makes NPV = 0
+                        <div>
+                            <b>Ex  6</b><br>
+                            A water purification kiosk costs 150,000/= and generates<br> 60,000/= per year for 3 years.Find IRR.
+                            <br><i>basically you just find the value of the rate</i><br>
+                            <img src="{% static 'images/eg.png' %}">
+                        </div>
+                    </li>
+                    <li>
+                        Payback Period - this is how long it takes to recover initial investment.
+                        <div>
+                            <b>eg</b><br>
+                            A business invest 300,000/= with expected annual savings of 90,000/=.Find the payback period
+                            <i>sln</i><br>
+                            Payback = 300000/90000 = 3.33 years
+                        </div>
+                    </li>
+                    </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h2>Application of cash flows</h2>
+    <ol>
+        <li>
+            Annuities - this is series of payments made at a regular intervals<br>
+            i. Accumulation phase -> the annuity is being financed/funded<br>
+            ii.Annuitilization -> when the payments begin.
+        </li>
+    </ol>
+    <h5>Types of annuities</h5>
+    <ol>
+        <li>Immediate annuity - payment begins immediately after purchase</li>
+        <li> Deferred annuity - payment begins at future date.</li>
+        <li> Fixed annuity</li>
+        <li>Variable annuity</li>
+        <li>Life annuity -> payment contingent on life</li>
+        <li>Term certain annuity -> payment for a particular term/period </li>
+        <li>Joint annuity -> covers 2 or more individuals</li>
+    </ol>
+    <h5>Mathematics of annuity</h5>
+    <ol>
+        <li>Annuity immediate<br>
+        <i>PV of Annuity immediate</i><br>
+            <img src="{% static 'images/PVAI.png' %}"><br>
+            <b>Eg</b><br>
+            A savings plan pay 10000/= per year for 8 years .If the effective annual rate is 7%<br>
+            Find PV of annuity immediate.<br>
+            <img src="{% static 'images/sln.png' %}"><br>
+            <i>Future value of annuity immediate</i><br>
+            <img src="{% static 'images/FVAI.png' %}"><br>
+            <b>eg</b>
+            A person deposited 2000/= at the end of each month for 4 years at nominal rate 12%<br>compounded monthly.Compute the future value
+            <br><i>sln</i><br>
+            <img src="{% static 'images/sln1.png' %}">
+        </li>
+        <li>Annuity-due<br>
+            <i>PV of annuity - due</i><br>
+            <img src="{% static 'images/PVAD.png' %}"><br>
+            <i>Future value of annuity due</i><br>
+            <img src="{% static 'images/FVAD.png' %}">
+
+        </li>
+
+    </ol>
+    <p>
+        <b>Life Annuity </b> -> contingent on life <br>
+        Probability of survival for t years<br>
+        <img src="{% static 'images/pr.png' %}"><br>
+        i.<b>Whole life annuity immediate</b> (<i>present value is a random variable denoted by z</i>)<br>
+        <img src="{% static 'images/WLAI.png' %}">
+        <div>
+    <b>eg</b><br>
+    Alex purchases a life annuity that pays 5,000/= for the next years<br> the probability of survival are yr 1 -> 0.99 ,yr->0.985 , yr -> 0.979.<br> Find the expected present value (EPV) of whole life annuity immediate for alex currently aged 40.Interest is 4% p.a<br>
+    <img src="{% static 'images/sln3.png' %}">
+</div>
+<div>
+    <b>ii.Whole life annuity due</b><br>
+<img src="{% static 'images/WLAD.png' %}">
+</div>
+    </p>
+
+</div>
+
+</body>
+</html>
